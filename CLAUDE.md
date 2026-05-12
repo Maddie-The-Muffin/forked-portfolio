@@ -39,7 +39,7 @@ CSS is loaded in this order in `index.html` — order matters:
 
 ### Design Tokens (from `tokens.css`)
 
-- Accent color: `--accent: #ff3a00` (hot orange)
+- Accent color: `--accent: #F5E100` (sunny yellow); `--accent-2: #FF6B9D` (hot pink secondary)
 - Font: monospace-first (`--font-mono`)
 - Shadows: hard pixelated `6px 6px 0` (brutalist aesthetic)
 - Container max-width: 1200px
