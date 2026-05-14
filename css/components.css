@@ -1,0 +1,105 @@
+/* ============================================================
+   components.css — contact form, project cards, skill grid
+   ============================================================ */
+
+/* ---------- Contact section layout ---------- */
+.contact__grid {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.contact__lede {
+  margin-bottom: var(--space-5);
+  font-size: var(--fs-md);
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.social-link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border-bottom: var(--border-thick);
+  padding-bottom: var(--space-1);
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+
+/* ---------- Contact form ---------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.contact-form__note {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  margin-bottom: var(--space-2);
+}
+
+/* Each field: label wraps the visible label text + input stacked vertically */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.field__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.field__input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-thick);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  box-shadow: var(--shadow-hard-sm);
+  transition: box-shadow var(--t-fast) var(--ease),
+              outline var(--t-fast) var(--ease);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.field__input:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.field__input::placeholder {
+  color: var(--muted);
+}
+
+.field__input--area {
+  resize: vertical;
+  min-height: 8rem;
+  line-height: var(--lh-body);
+}
+
+@media (min-width: 641px) {
+  .contact__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
